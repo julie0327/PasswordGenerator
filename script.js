@@ -86,6 +86,7 @@ let uppercase_char = [
   "Y",
   "Z",
 ];
+
 generateBtn.addEventListener("click", function () {
   let ask = prompt("Please enter the length of password");
   while (ask < 8 || ask > 128) {
@@ -93,7 +94,13 @@ generateBtn.addEventListener("click", function () {
       "Password should be at least 8 characters and no more than 128 characters"
     );
   }
+
   if (Number(ask) >= 8 || Number(ask) <= 128) {
+    let ask_1 = prompt("Include numbers, Y OR N?");
+    let ask_2 = prompt("Include lowercase, Y OR N?");
+    let ask_3 = prompt("Include uppercase, Y OR N?");
+    let ask_4 = prompt("Include special characters, Y OR N?");
+
     let question_1 = prompt("How many numbers?");
     let question_2 = prompt("How many lowercase?");
     let question_3 = prompt("How many uppercase?");
@@ -136,14 +143,136 @@ generateBtn.addEventListener("click", function () {
     };
 
     let password = "";
-    password += getRandomNum();
-    password += getRandomChar();
-    password += getRandomlowercase();
-    password += getRandomUppercase();
-    password = password
-      .split("")
-      .sort(() => Math.random() - 0.5)
-      .join("");
-    passwordText.value = password;
+    if (
+      ask_1.toUpperCase() === "Y" &&
+      ask_2.toUpperCase() === "Y" &&
+      ask_3.toUpperCase() === "Y" &&
+      ask_4.toUpperCase() === "Y"
+    ) {
+      password += getRandomNum();
+      password += getRandomChar();
+      password += getRandomlowercase();
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (
+      ask_1.toUpperCase() === "Y" &&
+      ask_3.toUpperCase() === "Y" &&
+      ask_4.toUpperCase() === "Y"
+    ) {
+      password += getRandomNum();
+      password += getRandomlowercase();
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (
+      ask_1.toUpperCase() === "Y" &&
+      ask_2.toUpperCase() === "Y" &&
+      ask_3.toUpperCase() === "Y"
+    ) {
+      password += getRandomNum();
+      password += getRandomChar();
+      password += getRandomlowercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (
+      ask_2.toUpperCase() === "Y" &&
+      ask_3.toUpperCase() === "Y" &&
+      ask_4.toUpperCase() === "Y"
+    ) {
+      password += getRandomChar();
+      password += getRandomlowercase();
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_1.toUpperCase() === "Y" && ask_2.toUpperCase() === "Y") {
+      password += getRandomNum();
+      password += getRandomChar();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_2.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
+      password += getRandomChar();
+      password += getRandomlowercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_3.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
+      password += getRandomlowercase();
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_1.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
+      password += getRandomNum();
+      password += getRandomlowercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_1.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
+      password += getRandomNum();
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_2.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
+      password += getRandomChar();
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_1.toUpperCase() === "Y") {
+      password += getRandomNum();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_2.toUpperCase() === "Y") {
+      password += getRandomChar();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_3.toUpperCase() === "Y") {
+      password += getRandomlowercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    } else if (ask_4.toUpperCase() === "Y") {
+      password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      passwordText.value = password;
+    }
   }
 });
