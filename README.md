@@ -1,9 +1,7 @@
 # Password_Generator
-=======
-## Generate a password randomly
----------
+Generate a password randomly
+--------------
 ## Project Specifivations
---------
 * Click the button to generate a password, then presented with a series of prompts for password criteria
 * Prompted for password criteria, then select which criteria to include in the password
 * Prompted for the length of the password, then to choose a length of at least 8 characters and no more than 128 characters
@@ -12,5 +10,4 @@
 * All prompts are answered, then a password is generated that matches the selected criteria
 * The password is generated, the password is written to the page
 ## Deployment
------------
 https://julie0327.github.io/julie0327.git.io.Password_Generator/
