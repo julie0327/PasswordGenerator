@@ -87,24 +87,54 @@ let uppercase_char = [
   "Z",
 ];
 
+let password = "";
 generateBtn.addEventListener("click", function () {
   let ask = prompt("Please enter the length of password");
+  if (ask === null) {
+    return;
+  }
   while (ask < 8 || ask > 128) {
     ask = prompt(
       "Password should be at least 8 characters and no more than 128 characters"
     );
+    if (ask === null) {
+      return;
+    }
   }
-
   if (Number(ask) >= 8 || Number(ask) <= 128) {
     let ask_1 = prompt("Include numbers, Y OR N?");
+    if (ask_1 === null) {
+      return;
+    }
     let ask_2 = prompt("Include lowercase, Y OR N?");
+    if (ask_2 === null) {
+      return;
+    }
     let ask_3 = prompt("Include uppercase, Y OR N?");
+    if (ask_3 === null) {
+      return;
+    }
     let ask_4 = prompt("Include special characters, Y OR N?");
+    if (ask_4 === null) {
+      return;
+    }
 
     let question_1 = prompt("How many numbers?");
+    if (question_1 === null) {
+      return;
+    }
     let question_2 = prompt("How many lowercase?");
+    if (question_2 === null) {
+      return;
+    }
     let question_3 = prompt("How many uppercase?");
+    if (question_3 === null) {
+      return;
+    }
     let question_4 = prompt("How many special characters?");
+    if (question_4 === null) {
+      return;
+    }
 
     let getRandomNum = function randomNum() {
       let num = "";
@@ -142,7 +172,6 @@ generateBtn.addEventListener("click", function () {
       return upper;
     };
 
-    let password = "";
     if (
       ask_1.toUpperCase() === "Y" &&
       ask_2.toUpperCase() === "Y" &&
@@ -274,5 +303,6 @@ generateBtn.addEventListener("click", function () {
         .join("");
       passwordText.value = password;
     }
+    generateBtn.innerHTML = "Regenerate Password";
   }
 });
