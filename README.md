@@ -1,4 +1,5 @@
-# Password_Generator
+Password_Generator
+====
 Generate a password randomly
 --------------
 ## Project Specifivations
