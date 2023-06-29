@@ -87,20 +87,19 @@ let uppercase_char = [
   "Z",
 ];
 
-let index = 0;
-function typewriter() {
-  if (index < password.length) {
-    passwordText.value += password[index];
-    index++;
-    setTimeout(typewriter, 200);
-  }
-}
 let password = "";
 generateBtn.addEventListener("click", function () {
+  let index = 0;
+  function typewriter() {
+    if (index < password.length) {
+      passwordText.value += password[index];
+      index++;
+      setTimeout(typewriter, 200);
+    }
+  }
   if (password.length > 0) {
     passwordText.value = "";
     password = "";
-    console.log("@@@@@@@");
   }
   let ask = prompt("Please enter the length of password");
   if (ask === null) {
@@ -197,7 +196,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      passwordText.value = password;
+      typewriter();
       console.log(password);
     } else if (
       ask_1.toUpperCase() === "Y" &&
