@@ -131,62 +131,60 @@ generateBtn.addEventListener("click", function () {
       return;
     }
 
-    let question_1 = prompt("How many numbers?");
-    if (question_1 === null) {
-      return;
-    }
-    let question_2 = prompt("How many lowercase?");
-    if (question_2 === null) {
-      return;
-    }
-    let question_3 = prompt("How many uppercase?");
-    if (question_3 === null) {
-      return;
-    }
-    let question_4 = prompt("How many special characters?");
-    if (question_4 === null) {
-      return;
-    }
-
-    let getRandomNum = function randomNum() {
-      let num = "";
-      for (let i = 0; i < question_1; i++) {
-        let id = Math.floor(Math.random() * 10);
-        num += id;
-      }
-      return num;
-    };
-    let getRandomlowercase = function randomLowercase() {
-      let lower = "";
-      for (let i = 0; i < question_2; i++) {
-        let id = Math.floor(Math.random() * lowercase_char.length);
-        lower += lowercase_char[id];
-      }
-      return lower;
-    };
-    let getRandomUppercase = function randomUppercase() {
-      let upper = "";
-      for (let i = 0; i < question_3; i++) {
-        let id = Math.floor(Math.random() * uppercase_char.length);
-        upper += uppercase_char[id];
-      }
-      return upper;
-    };
-    let getRandomChar = function randomChar() {
-      let char = "";
-      for (let i = 0; i < question_4; i++) {
-        let id = Math.floor(Math.random() * cha.length);
-        char += cha[id];
-      }
-      return char;
-    };
-
     if (
       ask_1.toUpperCase() === "Y" &&
       ask_2.toUpperCase() === "Y" &&
       ask_3.toUpperCase() === "Y" &&
       ask_4.toUpperCase() === "Y"
     ) {
+      let question_1 = prompt("How many numbers?");
+      let question_2 = prompt("How many lowercase?");
+      let question_3 = prompt("How many uppercase?");
+      let question_4 = prompt("How many special characters?");
+      if (question_1 === null) {
+        return;
+      }
+      if (question_2 === null) {
+        return;
+      }
+      if (question_3 === null) {
+        return;
+      }
+      if (question_4 === null) {
+        return;
+      }
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password +=
         getRandomNum() +
         getRandomChar() +
@@ -203,6 +201,33 @@ generateBtn.addEventListener("click", function () {
       ask_3.toUpperCase() === "Y" &&
       ask_4.toUpperCase() === "Y"
     ) {
+      let question_1 = prompt("How many numbers?");
+      let question_3 = prompt("How many uppercase?");
+      let question_4 = prompt("How many special characters?");
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password += getRandomNum() + getRandomUppercase() + getRandomChar();
       password = password
         .split("")
@@ -215,6 +240,33 @@ generateBtn.addEventListener("click", function () {
       ask_2.toUpperCase() === "Y" &&
       ask_3.toUpperCase() === "Y"
     ) {
+      let question_1 = prompt("How many numbers?");
+      let question_2 = prompt("How many lowercase?");
+      let question_3 = prompt("How many uppercase?");
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
       password += getRandomNum() + getRandomUppercase() + getRandomlowercase();
       password = password
         .split("")
@@ -227,6 +279,33 @@ generateBtn.addEventListener("click", function () {
       ask_3.toUpperCase() === "Y" &&
       ask_4.toUpperCase() === "Y"
     ) {
+      let question_2 = prompt("How many lowercase?");
+      let question_3 = prompt("How many uppercase?");
+      let question_4 = prompt("How many special characters?");
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password += getRandomChar() + getRandomlowercase() + getRandomUppercase();
       password = password
         .split("")
@@ -235,6 +314,24 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y" && ask_2.toUpperCase() === "Y") {
+      let question_1 = prompt("How many numbers?");
+      let question_2 = prompt("How many lowercase?");
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
       password += getRandomNum() + getRandomlowercase();
       password = password
         .split("")
@@ -251,6 +348,24 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_3.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
+      let question_3 = prompt("How many uppercase?");
+      let question_4 = prompt("How many special characters?");
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password += getRandomChar() + getRandomUppercase();
       password = password
         .split("")
@@ -259,6 +374,24 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
+      let question_1 = prompt("How many numbers?");
+      let question_3 = prompt("How many uppercase?");
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
       password += getRandomNum() + getRandomUppercase();
       password = password
         .split("")
@@ -267,6 +400,24 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
+      let question_1 = prompt("How many numbers?");
+      let question_4 = prompt("How many special characters?");
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password += getRandomNum() + getRandomChar();
       password = password
         .split("")
@@ -275,6 +426,24 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_2.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
+      let question_2 = prompt("How many lowercase?");
+      let question_4 = prompt("How many special characters?");
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password += getRandomChar() + getRandomlowercase();
       password = password
         .split("")
@@ -283,6 +452,15 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y") {
+      let question_1 = prompt("How many numbers?");
+      let getRandomNum = function randomNum() {
+        let num = "";
+        for (let i = 0; i < question_1; i++) {
+          let id = Math.floor(Math.random() * 10);
+          num += id;
+        }
+        return num;
+      };
       password += getRandomNum();
       password = password
         .split("")
@@ -291,6 +469,15 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_2.toUpperCase() === "Y") {
+      let question_2 = prompt("How many lowercase?");
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
       password += getRandomlowercase();
       password = password
         .split("")
@@ -299,6 +486,16 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_3.toUpperCase() === "Y") {
+      let question_3 = prompt("How many uppercase?");
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
+
       password += getRandomUppercase();
       password = password
         .split("")
@@ -307,6 +504,15 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_4.toUpperCase() === "Y") {
+      let question_4 = prompt("How many special characters?");
+      let getRandomChar = function randomChar() {
+        let char = "";
+        for (let i = 0; i < question_4; i++) {
+          let id = Math.floor(Math.random() * cha.length);
+          char += cha[id];
+        }
+        return char;
+      };
       password += getRandomChar();
       password = password
         .split("")
