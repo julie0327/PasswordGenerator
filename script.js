@@ -340,6 +340,24 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_2.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
+      let question_2 = prompt("How many lowercase?");
+      let question_3 = prompt("How many uppercase?");
+      let getRandomlowercase = function randomLowercase() {
+        let lower = "";
+        for (let i = 0; i < question_2; i++) {
+          let id = Math.floor(Math.random() * lowercase_char.length);
+          lower += lowercase_char[id];
+        }
+        return lower;
+      };
+      let getRandomUppercase = function randomUppercase() {
+        let upper = "";
+        for (let i = 0; i < question_3; i++) {
+          let id = Math.floor(Math.random() * uppercase_char.length);
+          upper += uppercase_char[id];
+        }
+        return upper;
+      };
       password += getRandomUppercase() + getRandomlowercase();
       password = password
         .split("")
