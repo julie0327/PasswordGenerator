@@ -11,3 +11,4 @@ Password_Generator
 * The password is generated, the password is written to the page
 ## Deployment
 https://julie0327.github.io/julie0327.git.io.Password_Generator/
+![image] (https://github.com/julie0327/julie0327.git.io.Password_Generator/blob/main/Capture.JPG)
