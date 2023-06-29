@@ -101,6 +101,20 @@ generateBtn.addEventListener("click", function () {
     passwordText.value = "";
     password = "";
   }
+
+  // let ask_1;
+  // let ask_2;
+  // let ask_3;
+  // let ask_4;
+  // function checkAnswer(answer) {
+  //   while (answer.toUpperCase() !== "Y" && answer.toUpperCase() !== "N") {
+  //     answer = prompt("Enter Y or N");
+  //     if (answer === null) {
+  //       return;
+  //     }
+  //   }
+  // }
+
   let ask = prompt("Please enter the length of password");
   if (ask === null) {
     return;
@@ -118,19 +132,46 @@ generateBtn.addEventListener("click", function () {
     if (ask_1 === null) {
       return;
     }
+    //checkAnswer(ask_1);
+    while (ask_1.toUpperCase() !== "Y" && ask_1.toUpperCase() !== "N") {
+      ask_1 = prompt("Enter Y or N");
+      if (ask_1 === null) {
+        return;
+      }
+    }
     let ask_2 = prompt("Include lowercase, Y OR N?");
     if (ask_2 === null) {
       return;
+    }
+    // checkAnswer(ask_2);
+    while (ask_2.toUpperCase() !== "Y" && ask_2.toUpperCase() !== "N") {
+      ask_2 = prompt("Enter Y or N");
+      if (ask_2 === null) {
+        return;
+      }
     }
     let ask_3 = prompt("Include uppercase, Y OR N?");
     if (ask_3 === null) {
       return;
     }
-    let ask_4 = prompt("Include special characters, Y OR N?");
+    //checkAnswer(ask_3);
+    while (ask_3.toUpperCase() !== "Y" && ask_3.toUpperCase() !== "N") {
+      ask_3 = prompt("Enter Y or N");
+      if (ask_3 === null) {
+        return;
+      }
+    }
+    let ask_4 = prompt("Include special symbols, Y OR N?");
     if (ask_4 === null) {
       return;
     }
-
+    //checkAnswer(ask_4);
+    while (ask_4.toUpperCase() !== "Y" && ask_4.toUpperCase() !== "N") {
+      ask_4 = prompt("Enter Y or N");
+      if (ask_4 === null) {
+        return;
+      }
+    }
     if (
       ask_1.toUpperCase() === "Y" &&
       ask_2.toUpperCase() === "Y" &&
