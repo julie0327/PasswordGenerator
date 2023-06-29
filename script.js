@@ -95,9 +95,13 @@ function typewriter() {
     setTimeout(typewriter, 200);
   }
 }
-
 let password = "";
 generateBtn.addEventListener("click", function () {
+  if (password.length > 0) {
+    passwordText.value = "";
+    password = "";
+    console.log("@@@@@@@");
+  }
   let ask = prompt("Please enter the length of password");
   if (ask === null) {
     return;
@@ -153,32 +157,29 @@ generateBtn.addEventListener("click", function () {
       }
       return num;
     };
-
-    let getRandomChar = function randomChar() {
-      let char = "";
-      for (let i = 0; i < question_2; i++) {
-        let id = Math.floor(Math.random() * cha.length);
-        char += cha[id];
-      }
-      return char;
-    };
-
     let getRandomlowercase = function randomLowercase() {
       let lower = "";
-      for (let i = 0; i < question_3; i++) {
+      for (let i = 0; i < question_2; i++) {
         let id = Math.floor(Math.random() * lowercase_char.length);
         lower += lowercase_char[id];
       }
       return lower;
     };
-
     let getRandomUppercase = function randomUppercase() {
       let upper = "";
-      for (let i = 0; i < question_4; i++) {
+      for (let i = 0; i < question_3; i++) {
         let id = Math.floor(Math.random() * uppercase_char.length);
         upper += uppercase_char[id];
       }
       return upper;
+    };
+    let getRandomChar = function randomChar() {
+      let char = "";
+      for (let i = 0; i < question_4; i++) {
+        let id = Math.floor(Math.random() * cha.length);
+        char += cha[id];
+      }
+      return char;
     };
 
     if (
@@ -187,24 +188,23 @@ generateBtn.addEventListener("click", function () {
       ask_3.toUpperCase() === "Y" &&
       ask_4.toUpperCase() === "Y"
     ) {
-      password += getRandomNum();
-      password += getRandomChar();
-      password += getRandomlowercase();
-      password += getRandomUppercase();
+      password +=
+        getRandomNum() +
+        getRandomChar() +
+        getRandomUppercase() +
+        getRandomlowercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
+      passwordText.value = password;
       console.log(password);
     } else if (
       ask_1.toUpperCase() === "Y" &&
       ask_3.toUpperCase() === "Y" &&
       ask_4.toUpperCase() === "Y"
     ) {
-      password += getRandomNum();
-      password += getRandomlowercase();
-      password += getRandomUppercase();
+      password += getRandomNum() + getRandomUppercase() + getRandomChar();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -216,9 +216,7 @@ generateBtn.addEventListener("click", function () {
       ask_2.toUpperCase() === "Y" &&
       ask_3.toUpperCase() === "Y"
     ) {
-      password += getRandomNum();
-      password += getRandomUppercase();
-      password += getRandomlowercase();
+      password += getRandomNum() + getRandomUppercase() + getRandomlowercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -230,9 +228,7 @@ generateBtn.addEventListener("click", function () {
       ask_3.toUpperCase() === "Y" &&
       ask_4.toUpperCase() === "Y"
     ) {
-      password += getRandomChar();
-      password += getRandomlowercase();
-      password += getRandomUppercase();
+      password += getRandomChar() + getRandomlowercase() + getRandomUppercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -240,8 +236,7 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y" && ask_2.toUpperCase() === "Y") {
-      password += getRandomNum();
-      password += getRandomChar();
+      password += getRandomNum() + getRandomlowercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -249,8 +244,7 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_2.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
-      password += getRandomChar();
-      password += getRandomlowercase();
+      password += getRandomUppercase() + getRandomlowercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -258,8 +252,7 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_3.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
-      password += getRandomlowercase();
-      password += getRandomUppercase();
+      password += getRandomChar() + getRandomUppercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -267,8 +260,7 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
-      password += getRandomNum();
-      password += getRandomlowercase();
+      password += getRandomNum() + getRandomUppercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -276,8 +268,7 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_1.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
-      password += getRandomNum();
-      password += getRandomUppercase();
+      password += getRandomNum() + getRandomChar();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -285,8 +276,7 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_2.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
-      password += getRandomChar();
-      password += getRandomUppercase();
+      password += getRandomChar() + getRandomlowercase();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
@@ -302,14 +292,6 @@ generateBtn.addEventListener("click", function () {
       typewriter();
       console.log(password);
     } else if (ask_2.toUpperCase() === "Y") {
-      password += getRandomChar();
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
-      typewriter();
-      console.log(password);
-    } else if (ask_3.toUpperCase() === "Y") {
       password += getRandomlowercase();
       password = password
         .split("")
@@ -317,8 +299,16 @@ generateBtn.addEventListener("click", function () {
         .join("");
       typewriter();
       console.log(password);
-    } else if (ask_4.toUpperCase() === "Y") {
+    } else if (ask_3.toUpperCase() === "Y") {
       password += getRandomUppercase();
+      password = password
+        .split("")
+        .sort(() => Math.random() - 0.5)
+        .join("");
+      typewriter();
+      console.log(password);
+    } else if (ask_4.toUpperCase() === "Y") {
+      password += getRandomChar();
       password = password
         .split("")
         .sort(() => Math.random() - 0.5)
