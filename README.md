@@ -9,7 +9,8 @@ Password_Generator
 * Answer each prompt, then input should be validated and at least one character type should be selected
 * All prompts are answered, then a password is generated that matches the selected criteria
 * The password is generated, the password is written to the page
-## Deployment
+Deployment
+-------
 https://julie0327.github.io/julie0327.git.io.Password_Generator/
 ---------
 ![](https://github.com/julie0327/julie0327.git.io.Password_Generator/blob/main/Capture.JPG)
