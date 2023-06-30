@@ -1,6 +1,6 @@
 Password_Generator
 ====
-* Generate a password randomly
+*   Using HTML, CSS, and JaveScript to build generate a password randomly
 ## Project Specifivations
 * Click the button to generate a password, then presented with a series of prompts for password criteria
 * Prompted for password criteria, then select which criteria to include in the password
