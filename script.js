@@ -194,7 +194,14 @@ generateBtn.addEventListener("click", function () {
       if (question_4 === null) {
         return;
       }
-
+      function checkLength() {
+        if (password.length !== parseInt(ask)) {
+          alert("Invalid Length");
+        } else {
+          typewriter();
+          console.log(password);
+        }
+      }
       // getRandomItems(num, question_1);
       // getRandomItems(lowercase_char, question_2);
       // getRandomItems(uppercase_char, question_3);
@@ -231,6 +238,7 @@ generateBtn.addEventListener("click", function () {
         }
         return char;
       };
+
       password +=
         getRandomNum() +
         getRandomChar() +
@@ -240,8 +248,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (
       ask_1.toUpperCase() === "Y" &&
       ask_3.toUpperCase() === "Y" &&
@@ -279,8 +286,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (
       ask_1.toUpperCase() === "Y" &&
       ask_2.toUpperCase() === "Y" &&
@@ -318,8 +324,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (
       ask_2.toUpperCase() === "Y" &&
       ask_3.toUpperCase() === "Y" &&
@@ -357,8 +362,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_2.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
       let question_2 = prompt("How many lowercase?");
@@ -383,8 +387,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_2.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
       let question_2 = prompt("How many lowercase?");
       let question_3 = prompt("How many uppercase?");
@@ -409,8 +412,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_3.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
       let question_3 = prompt("How many uppercase?");
       let question_4 = prompt("How many special characters?");
@@ -435,8 +437,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
       let question_3 = prompt("How many uppercase?");
@@ -461,8 +462,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
       let question_4 = prompt("How many special characters?");
@@ -487,8 +487,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_2.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
       let question_2 = prompt("How many lowercase?");
       let question_4 = prompt("How many special characters?");
@@ -513,8 +512,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_1.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
       let getRandomNum = function randomNum() {
@@ -530,8 +528,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_2.toUpperCase() === "Y") {
       let question_2 = prompt("How many lowercase?");
       let getRandomlowercase = function randomLowercase() {
@@ -547,8 +544,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_3.toUpperCase() === "Y") {
       let question_3 = prompt("How many uppercase?");
       let getRandomUppercase = function randomUppercase() {
@@ -565,8 +561,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     } else if (ask_4.toUpperCase() === "Y") {
       let question_4 = prompt("How many special characters?");
       let getRandomChar = function randomChar() {
@@ -582,8 +577,7 @@ generateBtn.addEventListener("click", function () {
         .split("")
         .sort(() => Math.random() - 0.5)
         .join("");
-      typewriter();
-      console.log(password);
+      checkLength();
     }
     generateBtn.innerHTML = "Regenerate Password";
   }
