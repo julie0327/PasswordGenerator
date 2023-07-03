@@ -13,7 +13,6 @@
 // generateBtn.addEventListener("click", writePassword);
 let generateBtn = document.querySelector("#generate");
 let passwordText = document.querySelector("#password");
-
 let cha = [
   "!",
   "@",
@@ -109,6 +108,7 @@ generateBtn.addEventListener("click", function () {
   // function checkAnswer(answer) {
   //   while (answer.toUpperCase() !== "Y" && answer.toUpperCase() !== "N") {
   //     answer = prompt("Enter Y or N");
+  //     return answer;
   //     if (answer === null) {
   //       return;
   //     }
@@ -132,7 +132,7 @@ generateBtn.addEventListener("click", function () {
     if (ask_1 === null) {
       return;
     }
-    //checkAnswer(ask_1);
+    // checkAnswer(ask_1);
     while (ask_1.toUpperCase() !== "Y" && ask_1.toUpperCase() !== "N") {
       ask_1 = prompt("Enter Y or N");
       if (ask_1 === null) {
@@ -154,7 +154,7 @@ generateBtn.addEventListener("click", function () {
     if (ask_3 === null) {
       return;
     }
-    //checkAnswer(ask_3);
+    // checkAnswer(ask_3);
     while (ask_3.toUpperCase() !== "Y" && ask_3.toUpperCase() !== "N") {
       ask_3 = prompt("Enter Y or N");
       if (ask_3 === null) {
@@ -165,7 +165,7 @@ generateBtn.addEventListener("click", function () {
     if (ask_4 === null) {
       return;
     }
-    //checkAnswer(ask_4);
+    // checkAnswer(ask_4);
     while (ask_4.toUpperCase() !== "Y" && ask_4.toUpperCase() !== "N") {
       ask_4 = prompt("Enter Y or N");
       if (ask_4 === null) {
@@ -179,21 +179,26 @@ generateBtn.addEventListener("click", function () {
       ask_4.toUpperCase() === "Y"
     ) {
       let question_1 = prompt("How many numbers?");
-      let question_2 = prompt("How many lowercase?");
-      let question_3 = prompt("How many uppercase?");
-      let question_4 = prompt("How many special characters?");
       if (question_1 === null) {
         return;
       }
+      let question_2 = prompt("How many lowercase?");
       if (question_2 === null) {
         return;
       }
+      let question_3 = prompt("How many uppercase?");
       if (question_3 === null) {
         return;
       }
+      let question_4 = prompt("How many special characters?");
       if (question_4 === null) {
         return;
       }
+
+      // getRandomItems(num, question_1);
+      // getRandomItems(lowercase_char, question_2);
+      // getRandomItems(uppercase_char, question_3);
+      // getRandomItems(cha, question_4);
       let getRandomNum = function randomNum() {
         let num = "";
         for (let i = 0; i < question_1; i++) {
