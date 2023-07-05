@@ -148,6 +148,12 @@ generateBtn.addEventListener("click", function () {
     }
     return char;
   }
+  function randomPassWord() {
+    return (password = password
+      .split("")
+      .sort(() => Math.random() - 0.5)
+      .join(""));
+  }
   while (ask < 8 || ask > 128) {
     ask = prompt(
       "Password should be at least 8 characters and no more than 128 characters"
@@ -231,10 +237,7 @@ generateBtn.addEventListener("click", function () {
         getRandomChar(question_4) +
         getRandomUppercase(question_3) +
         getRandomlowercase(question_2);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (
       ask_1.toUpperCase() === "Y" &&
@@ -269,10 +272,7 @@ generateBtn.addEventListener("click", function () {
         getRandomNum(question_1) +
         getRandomlowercase(question_2) +
         getRandomChar(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (
       ask_1.toUpperCase() === "Y" &&
@@ -307,10 +307,7 @@ generateBtn.addEventListener("click", function () {
         getRandomNum(question_1) +
         getRandomUppercase(question_3) +
         getRandomChar(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (
       ask_1.toUpperCase() === "Y" &&
@@ -345,10 +342,7 @@ generateBtn.addEventListener("click", function () {
         getRandomNum(question_1) +
         getRandomUppercase(question_2) +
         getRandomlowercase(question_3);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (
       ask_2.toUpperCase() === "Y" &&
@@ -383,10 +377,7 @@ generateBtn.addEventListener("click", function () {
         getRandomChar(question_2) +
         getRandomlowercase(question_3) +
         getRandomUppercase(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_2.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
@@ -409,10 +400,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomNum(question_1) + getRandomlowercase(question_2);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_2.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
       let question_2 = prompt("How many lowercase?");
@@ -436,10 +424,7 @@ generateBtn.addEventListener("click", function () {
       }
       password +=
         getRandomUppercase(question_2) + getRandomlowercase(question_3);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_3.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
       let question_3 = prompt("How many uppercase?");
@@ -462,10 +447,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomChar(question_3) + getRandomUppercase(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
@@ -488,10 +470,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomNum(question_1) + getRandomUppercase(question_3);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
@@ -514,10 +493,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomNum(question_1) + getRandomChar(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_2.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
       let question_2 = prompt("How many lowercase?");
@@ -540,10 +516,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomChar(question_2) + getRandomlowercase(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y") {
       let question_1 = prompt("How many numbers?");
@@ -562,10 +535,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomNum(question_1);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_2.toUpperCase() === "Y") {
       let question_2 = prompt("How many lowercase?");
@@ -584,10 +554,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomlowercase(question_2);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_3.toUpperCase() === "Y") {
       let question_3 = prompt("How many uppercase?");
@@ -606,10 +573,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomUppercase(question_3);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     } else if (ask_4.toUpperCase() === "Y") {
       let question_4 = prompt("How many special characters?");
@@ -628,10 +592,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password += getRandomChar(question_4);
-      password = password
-        .split("")
-        .sort(() => Math.random() - 0.5)
-        .join("");
+      randomPassWord();
       checkLength();
     }
     generateBtn.innerHTML = "Regenerate Password";
