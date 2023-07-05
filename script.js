@@ -340,8 +340,8 @@ generateBtn.addEventListener("click", function () {
       }
       password +=
         getRandomNum(question_1) +
-        getRandomUppercase(question_2) +
-        getRandomlowercase(question_3);
+        getRandomUppercase(question_3) +
+        getRandomlowercase(question_2);
       randomPassWord();
       checkLength();
     } else if (
@@ -374,9 +374,9 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password +=
-        getRandomChar(question_2) +
-        getRandomlowercase(question_3) +
-        getRandomUppercase(question_4);
+        getRandomChar(question_4) +
+        getRandomlowercase(question_2) +
+        getRandomUppercase(question_3);
       randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_2.toUpperCase() === "Y") {
@@ -423,7 +423,7 @@ generateBtn.addEventListener("click", function () {
         }
       }
       password +=
-        getRandomUppercase(question_2) + getRandomlowercase(question_3);
+        getRandomUppercase(question_3) + getRandomlowercase(question_2);
       randomPassWord();
       checkLength();
     } else if (ask_3.toUpperCase() === "Y" && ask_4.toUpperCase() === "Y") {
@@ -446,7 +446,7 @@ generateBtn.addEventListener("click", function () {
           console.log(password);
         }
       }
-      password += getRandomChar(question_3) + getRandomUppercase(question_4);
+      password += getRandomChar(question_4) + getRandomUppercase(question_3);
       randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y" && ask_3.toUpperCase() === "Y") {
@@ -515,7 +515,7 @@ generateBtn.addEventListener("click", function () {
           console.log(password);
         }
       }
-      password += getRandomChar(question_2) + getRandomlowercase(question_4);
+      password += getRandomChar(question_4) + getRandomlowercase(question_2);
       randomPassWord();
       checkLength();
     } else if (ask_1.toUpperCase() === "Y") {
