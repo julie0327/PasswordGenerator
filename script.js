@@ -227,6 +227,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -263,6 +264,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -298,6 +300,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -333,6 +336,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -368,6 +372,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -394,6 +399,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -417,6 +423,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -441,6 +448,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -464,6 +472,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -487,6 +496,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -510,6 +520,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -529,6 +540,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -548,6 +560,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -567,6 +580,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
@@ -586,6 +600,7 @@ generateBtn.addEventListener("click", function () {
         console.log(parseInt(ask));
         if (parseInt(ask) !== inputLength) {
           alert("Invalid Length");
+          return
         } else {
           typewriter();
           console.log(password);
