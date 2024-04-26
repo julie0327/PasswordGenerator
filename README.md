@@ -15,8 +15,11 @@
 
 ---
 ![]https://github.com/julie0327/PasswordGenerator/blob/main/img1.png
+
 ![]https://github.com/julie0327/PasswordGenerator/blob/main/img2.png
+
 ![]https://github.com/julie0327/PasswordGenerator/blob/main/img3.png
+
 ---
 link: https://julie0327.github.io/PasswordGenerator/
 
